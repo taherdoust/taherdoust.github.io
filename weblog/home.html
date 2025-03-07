@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taherdoust | Home</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">TAHERDOUST</div>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'professional' %}">Professional</a></li>
+            <li><a href="{% url 'social' %}">Social</a></li>
+            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+            <li><a href="{% url 'personal' %}">Personal</a></li>
+            <li><a href="{% url 'coaching' %}">Coaching</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to Taherdoust.com</h1>
+        <p>Exploring Digitalization, Architecture, and Personal Growth</p>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Taherdoust. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
