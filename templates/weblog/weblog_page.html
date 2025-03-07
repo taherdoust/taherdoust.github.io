@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>  <!-- Dynamic Title -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include "includes/navbar.html" %}  <!-- Reusable Navbar -->
+
+    <div class="container">
+        <h1>{{ page_heading }}</h1>  <!-- Dynamic Heading -->
+        <p>{{ page_description }}</p>  <!-- Dynamic Description -->
+
+        <h2>Latest Posts</h2>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <h3>{{ post.title }}</h3>
+                    {% if post.selected_picture %}
+                        <img src="{{ post.selected_picture.url }}" alt="Post Image">
+                    {% endif %}
+                    <p>{{ post.summary }}</p>
+                    <p><small>Published on: {{ post.datetime }}</small></p>
+                </li>
+            {% empty %}
+                <p>No posts available yet.</p>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% include "includes/footer.html" %}  <!-- Reusable Footer -->
+
+</body>
+</html>

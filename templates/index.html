@@ -1,40 +1,26 @@
-{% load static %}  <!-- Load static files in Django -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taherdoust | Home</title>
-
-    <!-- Correct way to link CSS using Django static template tag -->
+    <title>Home | Taherdoust</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">TAHERDOUST</div>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'professional' %}">Professional</a></li>
-            <li><a href="{% url 'social' %}">Social</a></li>
-            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-            <li><a href="{% url 'personal' %}">Personal</a></li>
-            <li><a href="{% url 'coaching' %}">Coaching</a></li>
-        </ul>
-    </nav>
+    {% include "includes/navbar.html" %}  <!-- Load Navbar -->
 
-    <!-- Hero Section -->
     <header class="hero">
         <h1>Welcome to Taherdoust.com</h1>
         <p>Exploring Digitalization, Architecture, and Personal Growth</p>
     </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Taherdoust. All rights reserved.</p>
-    </footer>
+    <section class="home-intro">
+        <p>This website features my professional insights, personal thoughts, and coaching experiences.</p>
+    </section>
+
+    {% include "includes/footer.html" %}  <!-- Load Footer -->
 
 </body>
 </html>
