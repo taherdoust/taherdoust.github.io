@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page_title }}</title>  <!-- Dynamic Title -->
+    <title>{{ page_title }}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
 
-    {% include "includes/navbar.html" %}  <!-- Reusable Navbar -->
+    {% include "includes/navbar.html" %}  <!-- Load Navbar -->
 
     <div class="container">
-        <h1>{{ page_heading }}</h1>  <!-- Dynamic Heading -->
-        <p>{{ page_description }}</p>  <!-- Dynamic Description -->
+        <h1>{{ page_heading }}</h1>
+        <p>{{ page_description }}</p>
 
         <h2>Latest Posts</h2>
         <ul>
@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    {% include "includes/footer.html" %}  <!-- Reusable Footer -->
+    {% include "includes/footer.html" %}  <!-- Load Footer -->
 
 </body>
 </html>
