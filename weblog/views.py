@@ -1,29 +1,20 @@
 from django.shortcuts import render
 from .models import Post
-from django.http import HttpResponse
-from django.conf import settings
-import os
 
-# Home Page (Manually load index.html from the root directory)
+# Home Page (Django now serves it from templates/)
 def home(request):
-    index_path = os.path.join(settings.BASE_DIR, "index.html")  # Full path to index.html
-    try:
-        with open(index_path, "r", encoding="utf-8") as f:
-            return HttpResponse(f.read())  # Serve the file as an HTTP response
-    except FileNotFoundError:
-        return HttpResponse("index.html not found", status=404)
+    return render(request, 'index.html')
 
-# Generic function to load weblog pages dynamically
+# Generic function for all weblog pages
 def weblog_page(request, classification, title, heading, description):
     posts = Post.objects.filter(classification=classification, privacy='public').order_by('-datetime')
-    return render(request, 'weblog_page.html', {  # weblog_page.html is in the root directory
+    return render(request, 'weblog_page.html', {
         'page_title': title,
         'page_heading': heading,
         'page_description': description,
         'posts': posts
     })
 
-# Define each weblog page using the dynamic function
 def professional_weblog(request):
     return weblog_page(request, 'professional', 'Professional Weblog', 'Welcome to the Professional Weblog', 'We discuss digitalization, smart cities, architecture, and more.')
 

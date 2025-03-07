@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taherdoust | Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% include "includes/navbar.html" %}  <!-- Include Navbar -->
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to Taherdoust.com</h1>
+        <p>Exploring Digitalization, Architecture, and Personal Growth</p>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+        <p>Discover insights into smart cities, digitalization, and self-improvement.</p>
+    </section>
+
+    {% include "includes/footer.html" %}  <!-- Include Footer -->
+
+</body>
+</html>

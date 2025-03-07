@@ -7,16 +7,12 @@
 │    ├── views.py
 │    ├── urls.py
 ├── templates/
-|    ├── index.html
-|    ├── /weblog/
-|    │    ├── professional.html
-|    │    ├── social.html
-|    │    ├── portfolio.html
-|    │    ├── personal.html
-|    │    ├── coaching.html
-│── static/               ✅ (Make sure this exists)
-│    ├── style.css        ✅ (Your CSS file)
-│    ├── logo.png
-│    ├── script.js
+|    ├── icludes/
+|    |    ├── navbar.html
+|    |    ├── footer.html
+|    ├── weblog_page.html
+│── static/               
+│    ├── style.css        
 │── .gitignore
 │── README.md
+├── index.html
