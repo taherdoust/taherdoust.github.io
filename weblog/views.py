@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'weblog/home.html')
+    return render(request, 'index.html')  # Homepage
 
 def professional_weblog(request):
     return render(request, 'weblog/professional.html')
@@ -17,3 +17,4 @@ def personal_weblog(request):
 
 def coaching(request):
     return render(request, 'weblog/coaching.html')
+

@@ -12,12 +12,12 @@
     <nav>
         <div class="logo">TAHERDOUST</div>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/weblog/professional.html">Professional</a></li>
-            <li><a href="/weblog/social.html">Social</a></li>
-            <li><a href="/weblog/portfolio.html">Portfolio</a></li>
-            <li><a href="/weblog/personal.html">Personal</a></li>
-            <li><a href="/weblog/coaching.html">Coaching</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'professional' %}">Professional</a></li>
+            <li><a href="{% url 'social' %}">Social</a></li>
+            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+            <li><a href="{% url 'personal' %}">Personal</a></li>
+            <li><a href="{% url 'coaching' %}">Coaching</a></li>
         </ul>
     </nav>
 
