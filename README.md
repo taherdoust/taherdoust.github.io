@@ -1,15 +1,22 @@
-/taherdoust.github.io/
-│── index.html    ✅ (Main homepage)
-│── /weblog/      ✅ (All subpages)
-│    ├── professional.html
-│    ├── social.html
-│    ├── portfolio.html
-│    ├── personal.html
-│    ├── coaching.html
-│── /static/      ✅ (For CSS, JS, images)
-│    ├── style.css
-│    ├── script.js
+/taherdoust_com/
+│── manage.py
+│── taherdoust_com/
+│    ├── settings.py
+│    ├── urls.py
+│── weblog/
+│    ├── views.py
+│    ├── urls.py
+├── templates/
+|    ├── index.html
+|    ├── /weblog/
+|    │    ├── professional.html
+|    │    ├── social.html
+|    │    ├── portfolio.html
+|    │    ├── personal.html
+|    │    ├── coaching.html
+│── static/               ✅ (Make sure this exists)
+│    ├── style.css        ✅ (Your CSS file)
 │    ├── logo.png
-│    ├── banner.jpg
+│    ├── script.js
 │── .gitignore
 │── README.md

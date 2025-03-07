@@ -122,20 +122,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # Static files settings
-# STATIC_URL = 'static/'
 STATIC_URL = '/static/'
 
-# Define STATIC_ROOT for collectstatic command
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Add STATICFILES_DIRS if you're keeping static files inside your app folders
+# Ensure Django knows where to find additional static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "static/css"),  # Tell Django where static files are
 ]
 
+# Directory where `collectstatic` will copy files (for production)
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+# Enable WhiteNoise for serving static files in production
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
